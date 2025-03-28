@@ -74,5 +74,3 @@ st.plotly_chart(fig_map, use_container_width=True)
 # Optional: Download data
 st.download_button("Download Filtered Data as CSV", data=filtered_df.to_csv(index=False), file_name="filtered_housing_data.csv")
 
-# Footer
-st.markdown("Developed by Minghao 💼")
