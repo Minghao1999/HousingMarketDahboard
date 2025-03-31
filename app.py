@@ -35,18 +35,7 @@ latest_data = filtered_df[filtered_df["Year"] == latest_year]
 fig2 = px.bar(latest_data, x="Country", y="Affordability Ratio", color="Country")
 st.plotly_chart(fig2, use_container_width=True)
 
-# Scatter Plot - Rent vs House Price
-filtered_df["GDP Growth Abs"] = filtered_df["GDP Growth (%)"].abs()
 
-fig3 = px.scatter(
-    filtered_df,
-    x="Rent Index",
-    y="House Price Index",
-    color="Country",
-    size="GDP Growth Abs",  # 使用处理过的非负数据
-    hover_name="Country"
-)
-st.plotly_chart(fig3, use_container_width=True)
 
 # 地理热图 - 各国平均房价指数
 st.subheader("🌍 Average House Price Index by Country (Geographic View)")
